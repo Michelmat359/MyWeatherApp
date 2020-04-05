@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class WeatherLocationService {
-  private key = 'a953807564ecd91fb21556cdbd76b646';
+  private key = '';
   private url = `http://api.openweathermap.org/data/2.5/weather`;
   constructor(private http: HttpClient) { }
   
