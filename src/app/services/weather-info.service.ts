@@ -10,7 +10,7 @@ import { ThrowStmt, ArrayType } from '@angular/compiler';
 
 
 export class WeatherInfoService {
-  private key = 'a953807564ecd91fb21556cdbd76b646';
+  private key = '';
   private url = `http://api.openweathermap.org/data/2.5/weather`;
   private urlForecast = `http://api.openweathermap.org/data/2.5/forecast`;
   constructor(private http: HttpClient) { }
