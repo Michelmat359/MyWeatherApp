@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+    <button mat-button (click)="back()">
+        <mat-icon>arrow_back</mat-icon>
+    </button>
+    <span>Forecast details </span>
+</mat-toolbar>
+
+<div style="margin:20px; " *ngFor="let forecast of forecasts">
+    <mat-card > 
+        <mat-card-header>
+            <div style="text-align: left;">
+                
+                <mat-card-title>{{forecast[0][0].DiaSemana}}, {{forecast[0][0].Mes}} {{forecast[0][0].dia}}, {{forecast[0][0].Anno}}</mat-card-title>
+            </div>
+        </mat-card-header>
+        <mat-card-content>   
+            <table *ngFor="let for of forecast">
+
+                <tr *ngFor="let f of for">
+                    <td>{{f.hora}}</td>
+                    <td>{{f.temp}} ºC</td>
+                    <td><img [src]="'http://openweathermap.org/img/w/' + f.icon + '.png'"></td>
+                </tr>
+                
+            </table>
+
+
+        </mat-card-content>
+    </mat-card>
+</div>

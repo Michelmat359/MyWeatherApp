@@ -1,0 +1,43 @@
+<mat-toolbar color="primary">
+    <button mat-button (click)="back()">
+        <mat-icon>arrow_back</mat-icon>
+    </button>
+    <span>Weather details</span>
+</mat-toolbar>
+
+<div style="margin:20px; ">
+    <mat-card>
+        <mat-card-header>
+            
+                <mat-card-title >{{infod.name}}</mat-card-title>
+                <mat-card-subtitle>{{infod.country}}</mat-card-subtitle>
+           
+            <button mat-icon-button (click)="refresh()">
+                <mat-icon>refresh</mat-icon>
+            </button>
+        </mat-card-header>
+
+        <mat-card-content >
+            <div style="text-align: center;">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="color: red; text-align: right;">{{infod.temp_max}} ºC</td>
+                        <td ROWSPAN="2" style="font-size: 40px;">{{infod.temp}}  ºC</td>
+                        <td ROWSPAN="2"><img [src]="'http://openweathermap.org/img/w/' + infod?.icon + '.png'"></td>
+                    </tr>
+                    <tr>
+                        <td style="color: blue; text-align: right;">{{infod.temp_min}} ºC</td>
+                    </tr>
+                </table>
+            </div>
+            <br><br>
+            <div style="text-align: center;">
+            <span>{{infod.desc}}</span><br>
+            <span>HUMIDITY: {{infod.humidity}}</span><br>
+            <span>CLOUDS: {{infod.clouds}}</span><br>
+            <span>PRESSURE: {{infod.pressure}} hpa</span><br>
+            <span>WIND: {{infod.wind}} KMS/h</span>
+                </div>
+        </mat-card-content>
+    </mat-card>
+</div>

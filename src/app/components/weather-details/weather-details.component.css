@@ -1,0 +1,8 @@
+mat-card {
+    margin: 10px;
+    width: auto;
+}
+
+mat-card-header {
+    justify-content: space-between;
+}
